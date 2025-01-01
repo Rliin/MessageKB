@@ -11,8 +11,32 @@ body {
   height: 100vh;
 }
 
-/* Konteyner Merkezleme */
-#auth-container, #chat-container {
+#auth-container {
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #333;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#login-form, #register-form {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+#login-form:last-child, #register-form:last-child {
+  border-right: none;
+}
+
+#chat-container {
   width: 100%;
   max-width: 600px;
   background: #fff;
@@ -33,17 +57,10 @@ body {
   margin-bottom: 20px;
 }
 
-#auth-container div {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
 
-#auth-container div > div {
-  width: 48%; /* İki sütun arasında eşit boşluk */
-}
+/*#auth-container div > div {
+  width: 48%;  İki sütun arasında eşit boşluk
+}*/
 
 #auth-container input {
   width: 100%;
@@ -51,12 +68,13 @@ body {
   margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 #auth-container button {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin-top: 10px;
   background: #1e3c72;
   color: white;
   border: none;
@@ -75,7 +93,7 @@ body {
 }
 
 #google-button {
-  background-color: #db4437;
+  background-color: #db4437 !important; 
   color: white;
   padding: 10px 20px;
   border: none;

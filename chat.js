@@ -5,7 +5,7 @@ auth.onAuthStateChanged((user) => {
     chatContainer.style.display = "block";
     db.ref(`users/${user.uid}/name`).once("value").then((snapshot) => {
       const name = snapshot.val();
-      document.getElementById("current-user-name").textContent = `Merhaba, ${name}`;
+      document.getElementById("current-user-name").textContent = `Hello, ${name}`;
     });
   } else {
     authContainer.style.display = "flex";

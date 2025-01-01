@@ -15,24 +15,24 @@
 <body>
   <!-- Giriş ve Kayıt -->
   <div id="auth-container">
-    <div id="register-form">
-      <h2>Register</h2>
-      <input type="text" id="register-name" placeholder="Name">
-      <input type="email" id="register-email" placeholder="Email">
-      <input type="password" id="register-password" placeholder="Password">
-      <button id="register-button">Register</button>
-    </div>
     <div id="login-form">
-      <h2>Login</h2>
-      <input type="email" id="login-email" placeholder="Email">
-      <input type="password" id="login-password" placeholder="Password">
-      <button id="login-button">Login</button>
+      <h2>Giriş Yap</h2>
+      <input type="email" id="login-email" placeholder="E-posta">
+      <input type="password" id="login-password" placeholder="Şifre">
+      <button id="login-button">Giriş Yap</button>
+      <div id="google-login">
+        <!--  <h2>Alternatif:</h2> -->
+        <button id="google-button" class="icon-button">
+          <i class="fab fa-google"></i> Google ile Giriş Yap
+        </button>
+      </div>
     </div>
-    <div id="google-login">
-      <h2>Or Login with Google</h2>
-      <button id="google-button" class="icon-button">
-        <i class="fab fa-google"></i> Login with Google
-      </button>
+    <div id="register-form">
+      <h2>Kayıt Ol</h2>
+      <input type="text" id="register-name" placeholder="İsim">
+      <input type="email" id="register-email" placeholder="E-posta">
+      <input type="password" id="register-password" placeholder="Şifre">
+      <button id="register-button">Kayıt Ol</button>
     </div>
   </div>
 
@@ -40,16 +40,16 @@
   <div id="chat-container" style="display: none;">
     <div id="user-settings">
       <span id="current-user-name"></span>
-      <input type="text" id="new-user-name" placeholder="Change your name">
-      <button id="change-name-button">Change Name</button>
+      <input type="text" id="new-user-name" placeholder="Yeni isim gir">
+      <button id="change-name-button">İsmi değiştir</button>
       <button id="logout-button" class="icon-button">
-        <i class="fas fa-sign-out-alt"></i> Logout
+        <i class="fas fa-sign-out-alt"></i> Çıkış Yap
       </button>
     </div>
     <div id="messages"></div>
     <div id="input-area">
-      <input type="text" id="message-input" placeholder="Type your message...">
-      <button id="send-button">Send</button>
+      <input type="text" id="message-input" placeholder="Mesajınızı yazın...">
+      <button id="send-button">Gönder</button>
     </div>
   </div>
 
