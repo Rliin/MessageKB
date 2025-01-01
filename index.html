@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase'i Global Script olarak ekliyoruz -->
+  <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div id="chat-container">
+    <div id="messages"></div>
+    <div id="input-area">
+      <input type="text" id="message-input" placeholder="Mesajınızı yazın...">
+      <button id="send-button">Gönder</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
