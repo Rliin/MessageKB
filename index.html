@@ -3,20 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firebase Chat</title>
+  <title>Firebase Chat App</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <!-- Firebase'i Global Script olarak ekliyoruz -->
+  <!-- Firebase Scripts -->
   <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-database-compat.js"></script>
 </head>
 <body>
-  <div id="chat-container">
-    <div id="messages"></div>
-    <div id="input-area">
-      <input type="text" id="message-input" placeholder="Mesajınızı yazın...">
-      <button id="send-button">Gönder</button>
+  <!-- Giriş ve Kayıt -->
+  <div id="auth-container">
+    <div id="register-form">
+      <h2>Register</h2>
+      <input type="text" id="register-name" placeholder="Name">
+      <input type="email" id="register-email" placeholder="Email">
+      <input type="password" id="register-password" placeholder="Password">
+      <button id="register-button">Register</button>
+    </div>
+    <div id="login-form">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email">
+      <input type="password" id="login-password" placeholder="Password">
+      <button id="login-button">Login</button>
+    </div>
+    <div id="google-login">
+      <h2>Or Login with Google</h2>
+      <button id="google-button" class="icon-button">
+        <i class="fab fa-google"></i> Login with Google
+      </button>
     </div>
   </div>
-  <script src="app.js"></script>
+
+  <!-- Mesajlaşma -->
+  <div id="chat-container" style="display: none;">
+    <div id="user-settings">
+      <span id="current-user-name"></span>
+      <input type="text" id="new-user-name" placeholder="Change your name">
+      <button id="change-name-button">Change Name</button>
+      <button id="logout-button" class="icon-button">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+    <div id="messages"></div>
+    <div id="input-area">
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="auth.js"></script>
+  <script src="chat.js"></script>
 </body>
 </html>
